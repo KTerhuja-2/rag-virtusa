@@ -14,7 +14,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain, ConversationChain
 from prompt_templates import prompts
 import os
-from langchain_chroma import Chroma
+# from langchain_chroma import Chroma
 from langchain_community.vectorstores import FAISS
 from langchain.chains import create_history_aware_retriever
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -33,9 +33,6 @@ with st.sidebar:
     st.image('data/JLL_solution_dlow-Page-3.drawio.png')
 if 'llm' not in session:
     llm = load_model.load_llm(type='gemini')
-
-
-
 
 
 if 'generated' not in session:
